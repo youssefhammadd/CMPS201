@@ -1,0 +1,409 @@
+Component: Arm Compiler for Embedded 6.19 Tool: armlink [5e73cb00]
+
+==============================================================================
+
+Section Cross References
+
+    pacmanintegration.o(MYCODE) refers to pacmanintegration.o(MYDATA) for GHOST1X
+    startup_stm32f10x_md.o(STACK) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32f10x_md.o(HEAP) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32f10x_md.o(RESET) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32f10x_md.o(RESET) refers to startup_stm32f10x_md.o(STACK) for __initial_sp
+    startup_stm32f10x_md.o(RESET) refers to startup_stm32f10x_md.o(.text) for Reset_Handler
+    startup_stm32f10x_md.o(.text) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32f10x_md.o(.text) refers to system_stm32f10x.o(.text.SystemInit) for SystemInit
+    startup_stm32f10x_md.o(.text) refers to pacmanintegration.o(MYCODE) for __main
+    startup_stm32f10x_md.o(.text) refers to startup_stm32f10x_md.o(HEAP) for Heap_Mem
+    startup_stm32f10x_md.o(.text) refers to startup_stm32f10x_md.o(STACK) for Stack_Mem
+    system_stm32f10x.o(.text.SystemInit) refers to system_stm32f10x.o(.text.SetSysClock) for SetSysClock
+    system_stm32f10x.o(.ARM.exidx.text.SystemInit) refers to system_stm32f10x.o(.text.SystemInit) for [Anonymous Symbol]
+    system_stm32f10x.o(.text.SetSysClock) refers to system_stm32f10x.o(.text.SetSysClockTo72) for SetSysClockTo72
+    system_stm32f10x.o(.ARM.exidx.text.SetSysClock) refers to system_stm32f10x.o(.text.SetSysClock) for [Anonymous Symbol]
+    system_stm32f10x.o(.text.SystemCoreClockUpdate) refers to system_stm32f10x.o(.data.SystemCoreClock) for SystemCoreClock
+    system_stm32f10x.o(.text.SystemCoreClockUpdate) refers to system_stm32f10x.o(.rodata.AHBPrescTable) for AHBPrescTable
+    system_stm32f10x.o(.ARM.exidx.text.SystemCoreClockUpdate) refers to system_stm32f10x.o(.text.SystemCoreClockUpdate) for [Anonymous Symbol]
+    system_stm32f10x.o(.ARM.exidx.text.SetSysClockTo72) refers to system_stm32f10x.o(.text.SetSysClockTo72) for [Anonymous Symbol]
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing system_stm32f10x.o(.text), (0 bytes).
+    Removing system_stm32f10x.o(.ARM.exidx.text.SystemInit), (8 bytes).
+    Removing system_stm32f10x.o(.ARM.exidx.text.SetSysClock), (8 bytes).
+    Removing system_stm32f10x.o(.text.SystemCoreClockUpdate), (290 bytes).
+    Removing system_stm32f10x.o(.ARM.exidx.text.SystemCoreClockUpdate), (8 bytes).
+    Removing system_stm32f10x.o(.ARM.exidx.text.SetSysClockTo72), (8 bytes).
+    Removing system_stm32f10x.o(.data.SystemCoreClock), (4 bytes).
+    Removing system_stm32f10x.o(.rodata.AHBPrescTable), (16 bytes).
+
+8 unused section(s) (total 342 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../clib/heapaux.c                        0x00000000   Number         0  heapauxi.o ABSOLUTE
+    PacmanIntegration.s                      0x00000000   Number         0  pacmanintegration.o ABSOLUTE
+    RTE/Device/STM32F103C8/startup_stm32f10x_md.s 0x00000000   Number         0  startup_stm32f10x_md.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    system_stm32f10x.c                       0x00000000   Number         0  system_stm32f10x.o ABSOLUTE
+    RESET                                    0x08000000   Section      236  startup_stm32f10x_md.o(RESET)
+    .text                                    0x080000ec   Section       64  startup_stm32f10x_md.o(.text)
+    .text                                    0x0800012c   Section        0  heapauxi.o(.text)
+    SetSysClock                              0x08000135   Thumb Code     8  system_stm32f10x.o(.text.SetSysClock)
+    [Anonymous Symbol]                       0x08000134   Section        0  system_stm32f10x.o(.text.SetSysClock)
+    SetSysClockTo72                          0x0800013d   Thumb Code   290  system_stm32f10x.o(.text.SetSysClockTo72)
+    [Anonymous Symbol]                       0x0800013c   Section        0  system_stm32f10x.o(.text.SetSysClockTo72)
+    [Anonymous Symbol]                       0x08000260   Section        0  system_stm32f10x.o(.text.SystemInit)
+    MYCODE                                   0x080002c8   Section    31344  pacmanintegration.o(MYCODE)
+    EXECUTEPACMAN                            0x080002ed   Thumb Code   520  pacmanintegration.o(MYCODE)
+    LCD_WRITE                                0x0800052d   Thumb Code    44  pacmanintegration.o(MYCODE)
+    LCD_COMMAND_WRITE                        0x08000565   Thumb Code    44  pacmanintegration.o(MYCODE)
+    LCD_DATA_WRITE                           0x08000599   Thumb Code    36  pacmanintegration.o(MYCODE)
+    LCD_INIT                                 0x080005c5   Thumb Code   222  pacmanintegration.o(MYCODE)
+    ADDRESS_SET                              0x080006a9   Thumb Code    92  pacmanintegration.o(MYCODE)
+    DRAWPIXEL                                0x08000707   Thumb Code    68  pacmanintegration.o(MYCODE)
+    DRAW_RECTANGLE_FILLED                    0x0800074b   Thumb Code    70  pacmanintegration.o(MYCODE)
+    SETUP                                    0x08000799   Thumb Code   164  pacmanintegration.o(MYCODE)
+    delay_1_second                           0x08000869   Thumb Code    22  pacmanintegration.o(MYCODE)
+    delay_half_second                        0x0800087f   Thumb Code    22  pacmanintegration.o(MYCODE)
+    delay_10_milli_second                    0x080008ab   Thumb Code    22  pacmanintegration.o(MYCODE)
+    DRAW_Hidden_Key                          0x080008c9   Thumb Code   188  pacmanintegration.o(MYCODE)
+    DRAW_winner                              0x08000987   Thumb Code   218  pacmanintegration.o(MYCODE)
+    DRAW_LEVEL1                              0x08000a6d   Thumb Code   120  pacmanintegration.o(MYCODE)
+    DRAW_LEVEL2                              0x08000b01   Thumb Code   120  pacmanintegration.o(MYCODE)
+    DRAW_GHOST                               0x08000b79   Thumb Code   312  pacmanintegration.o(MYCODE)
+    MOVE_GHOST1_RIGHT                        0x08000ccd   Thumb Code   110  pacmanintegration.o(MYCODE)
+    MOVE_GHOST1_LEFT                         0x08000d3b   Thumb Code    90  pacmanintegration.o(MYCODE)
+    MOVE_GHOST2_RIGHT                        0x08000d95   Thumb Code    98  pacmanintegration.o(MYCODE)
+    MOVE_GHOST2_LEFT                         0x08000df7   Thumb Code    90  pacmanintegration.o(MYCODE)
+    MOVE_GHOST3_RIGHT                        0x08000e71   Thumb Code    98  pacmanintegration.o(MYCODE)
+    MOVE_GHOST3_LEFT                         0x08000ed3   Thumb Code    90  pacmanintegration.o(MYCODE)
+    DRAW_CIRCLE                              0x08000f3d   Thumb Code   188  pacmanintegration.o(MYCODE)
+    VERLine                                  0x08000ff9   Thumb Code    24  pacmanintegration.o(MYCODE)
+    DRAW_HIDDEN_PRISONER                     0x08001013   Thumb Code   214  pacmanintegration.o(MYCODE)
+    DRAW_WIN_ANIMATION                       0x080010f5   Thumb Code   204  pacmanintegration.o(MYCODE)
+    DRAW_WALLS                               0x080011c3   Thumb Code   252  pacmanintegration.o(MYCODE)
+    DRAW_TIMESLOT                            0x080012c1   Thumb Code   412  pacmanintegration.o(MYCODE)
+    DRAW_PRISONER                            0x0800145f   Thumb Code   214  pacmanintegration.o(MYCODE)
+    MOVE_PRISONER_LEFT                       0x08001541   Thumb Code   104  pacmanintegration.o(MYCODE)
+    MOVE_PRISONER_RIGHT                      0x080015b9   Thumb Code   108  pacmanintegration.o(MYCODE)
+    MOVE_PRISONER_DOWN                       0x08001635   Thumb Code   108  pacmanintegration.o(MYCODE)
+    MOVE_PRISONER_UP                         0x080016b1   Thumb Code   108  pacmanintegration.o(MYCODE)
+    Draw_Arrow                               0x0800172d   Thumb Code   110  pacmanintegration.o(MYCODE)
+    DRAW_TIMEOUT                             0x0800179d   Thumb Code   732  pacmanintegration.o(MYCODE)
+    INITIALIZE_VARIABLES                     0x08001a9b   Thumb Code   138  pacmanintegration.o(MYCODE)
+    DRAW_TIME                                0x08001b5d   Thumb Code   342  pacmanintegration.o(MYCODE)
+    DRAW_LEFT_ZERO                           0x08001cbd   Thumb Code   188  pacmanintegration.o(MYCODE)
+    DRAW_RIGHT_ZERO                          0x08001d7b   Thumb Code   188  pacmanintegration.o(MYCODE)
+    DRAW_LEFT_ONE                            0x08001e39   Thumb Code   224  pacmanintegration.o(MYCODE)
+    DRAW_RIGHT_ONE                           0x08001f1b   Thumb Code   224  pacmanintegration.o(MYCODE)
+    DRAW_RIGHT_EIGHT                         0x08002103   Thumb Code   260  pacmanintegration.o(MYCODE)
+    DRAW_RIGHT_NINE                          0x0800230f   Thumb Code   260  pacmanintegration.o(MYCODE)
+    DRAW_LEFT_TWO                            0x08002415   Thumb Code   260  pacmanintegration.o(MYCODE)
+    DRAW_RIGHT_TWO                           0x0800251b   Thumb Code   260  pacmanintegration.o(MYCODE)
+    DRAW_LEFT_THREE                          0x08002621   Thumb Code   260  pacmanintegration.o(MYCODE)
+    DRAW_RIGHT_THREE                         0x08002727   Thumb Code   260  pacmanintegration.o(MYCODE)
+    DRAW_RIGHT_FIVE                          0x08002933   Thumb Code   260  pacmanintegration.o(MYCODE)
+    DRAW_RIGHT_SIX                           0x08002b3f   Thumb Code   260  pacmanintegration.o(MYCODE)
+    DRAW_RIGHT_FOUR                          0x08002d4b   Thumb Code   260  pacmanintegration.o(MYCODE)
+    DRAW_RIGHT_SEVEN                         0x08002f33   Thumb Code   224  pacmanintegration.o(MYCODE)
+    DRAW_00                                  0x08003015   Thumb Code    24  pacmanintegration.o(MYCODE)
+    DRAW_01                                  0x0800302d   Thumb Code    16  pacmanintegration.o(MYCODE)
+    DRAW_02                                  0x0800303d   Thumb Code    16  pacmanintegration.o(MYCODE)
+    DRAW_03                                  0x0800304d   Thumb Code    16  pacmanintegration.o(MYCODE)
+    DRAW_04                                  0x0800305d   Thumb Code    16  pacmanintegration.o(MYCODE)
+    DRAW_05                                  0x0800306f   Thumb Code    16  pacmanintegration.o(MYCODE)
+    DRAW_06                                  0x0800307f   Thumb Code    16  pacmanintegration.o(MYCODE)
+    DRAW_07                                  0x0800308f   Thumb Code    16  pacmanintegration.o(MYCODE)
+    DRAW_08                                  0x0800309f   Thumb Code    16  pacmanintegration.o(MYCODE)
+    DRAW_09                                  0x080030b1   Thumb Code    16  pacmanintegration.o(MYCODE)
+    DRAW_10                                  0x080030c1   Thumb Code    16  pacmanintegration.o(MYCODE)
+    DRAW_11                                  0x080030d1   Thumb Code    16  pacmanintegration.o(MYCODE)
+    DRAW_12                                  0x080030e3   Thumb Code    16  pacmanintegration.o(MYCODE)
+    DRAW_13                                  0x080030f3   Thumb Code    16  pacmanintegration.o(MYCODE)
+    DRAW_14                                  0x08003103   Thumb Code    16  pacmanintegration.o(MYCODE)
+    DRAW_15                                  0x08003113   Thumb Code    16  pacmanintegration.o(MYCODE)
+    DRAW_16                                  0x08003123   Thumb Code    16  pacmanintegration.o(MYCODE)
+    DRAW_17                                  0x08003133   Thumb Code    16  pacmanintegration.o(MYCODE)
+    DRAW_18                                  0x08003145   Thumb Code    16  pacmanintegration.o(MYCODE)
+    DRAW_19                                  0x08003155   Thumb Code    16  pacmanintegration.o(MYCODE)
+    DRAW_20                                  0x08003167   Thumb Code    16  pacmanintegration.o(MYCODE)
+    DRAW_21                                  0x08003177   Thumb Code    16  pacmanintegration.o(MYCODE)
+    DRAW_22                                  0x08003187   Thumb Code    16  pacmanintegration.o(MYCODE)
+    DRAW_23                                  0x08003197   Thumb Code    16  pacmanintegration.o(MYCODE)
+    DRAW_24                                  0x080031a7   Thumb Code    16  pacmanintegration.o(MYCODE)
+    DRAW_25                                  0x080031b7   Thumb Code    16  pacmanintegration.o(MYCODE)
+    DRAW_26                                  0x080031c7   Thumb Code    16  pacmanintegration.o(MYCODE)
+    DRAW_27                                  0x080031d9   Thumb Code    16  pacmanintegration.o(MYCODE)
+    DRAW_28                                  0x080031e9   Thumb Code    16  pacmanintegration.o(MYCODE)
+    DRAW_29                                  0x080031f9   Thumb Code    16  pacmanintegration.o(MYCODE)
+    DRAW_30                                  0x08003209   Thumb Code    16  pacmanintegration.o(MYCODE)
+    DRAW_LOSE                                0x0800321b   Thumb Code   352  pacmanintegration.o(MYCODE)
+    LOSE2                                    0x0800337b   Thumb Code    16  pacmanintegration.o(MYCODE)
+    VERLine1                                 0x0800338d   Thumb Code    24  pacmanintegration.o(MYCODE)
+    GHOST_COLLISION                          0x080033a5   Thumb Code   130  pacmanintegration.o(MYCODE)
+    WALL_COLLISION_DOWN                      0x08003427   Thumb Code    84  pacmanintegration.o(MYCODE)
+    WALL_COLLISION_UP                        0x0800347b   Thumb Code    84  pacmanintegration.o(MYCODE)
+    WALL_COLLISION_RIGHT                     0x080034cf   Thumb Code    82  pacmanintegration.o(MYCODE)
+    MAIN_MENU                                0x08003521   Thumb Code   150  pacmanintegration.o(MYCODE)
+    Draw_Arrow2                              0x080035b7   Thumb Code   110  pacmanintegration.o(MYCODE)
+    DRAW_winner_PACMAN                       0x0800364d   Thumb Code   200  pacmanintegration.o(MYCODE)
+    Draw_Bunny                               0x08003715   Thumb Code 10298  pacmanintegration.o(MYCODE)
+    EXECUTEFROGGER                           0x08005f4f   Thumb Code  1168  pacmanintegration.o(MYCODE)
+    REINITIALIZE_SPEED                       0x080063df   Thumb Code    48  pacmanintegration.o(MYCODE)
+    ZEROJUMP_LEVEL2                          0x080064b9   Thumb Code    32  pacmanintegration.o(MYCODE)
+    FIRSTJUMP_LEVEL2                         0x080064d9   Thumb Code    64  pacmanintegration.o(MYCODE)
+    SECONDJUMP_LEVEL2                        0x08006519   Thumb Code    48  pacmanintegration.o(MYCODE)
+    THIRDJUMP_LEVEL2                         0x08006549   Thumb Code    52  pacmanintegration.o(MYCODE)
+    FOURTHJUMP_LEVEL2                        0x0800657d   Thumb Code    52  pacmanintegration.o(MYCODE)
+    FIFTHJUMP_LEVEL2                         0x080065b1   Thumb Code   280  pacmanintegration.o(MYCODE)
+    SIXTHJUMP_LEVEL2                         0x080066c9   Thumb Code   276  pacmanintegration.o(MYCODE)
+    SEVENTHJUMP_LEVEL2                       0x080067dd   Thumb Code   272  pacmanintegration.o(MYCODE)
+    WIN2                                     0x080068ed   Thumb Code     8  pacmanintegration.o(MYCODE)
+    CHECK_INPUT_LEVEL2                       0x080068f5   Thumb Code   148  pacmanintegration.o(MYCODE)
+    CHECK_INPUT                              0x08006989   Thumb Code   184  pacmanintegration.o(MYCODE)
+    MOVE_BUNNY_IN_RIVER_LEVEL2               0x08006a41   Thumb Code   296  pacmanintegration.o(MYCODE)
+    MOVE_BUNNY_IN_RIVER                      0x08006b69   Thumb Code   236  pacmanintegration.o(MYCODE)
+    DRAW_WIN_ANIMATION2                      0x08006c55   Thumb Code   228  pacmanintegration.o(MYCODE)
+    DRAW_LOSE2                               0x08006d39   Thumb Code   354  pacmanintegration.o(MYCODE)
+    ZEROJUMP                                 0x08006e9b   Thumb Code    32  pacmanintegration.o(MYCODE)
+    FIRSTJUMP                                0x08006ebb   Thumb Code    64  pacmanintegration.o(MYCODE)
+    SECONDJUMP                               0x08006efb   Thumb Code    44  pacmanintegration.o(MYCODE)
+    THIRDJUMP                                0x08006f27   Thumb Code    44  pacmanintegration.o(MYCODE)
+    FOURTHJUMP                               0x08006f53   Thumb Code   272  pacmanintegration.o(MYCODE)
+    WINJUMP                                  0x08007063   Thumb Code     8  pacmanintegration.o(MYCODE)
+    MOVE_BUNNY_DOWN                          0x0800706b   Thumb Code   172  pacmanintegration.o(MYCODE)
+    MOVE_BUNNY_DOWN_LEVEL2                   0x08007117   Thumb Code   194  pacmanintegration.o(MYCODE)
+    MOVE_BUNNY_UP                            0x080071d9   Thumb Code   154  pacmanintegration.o(MYCODE)
+    MOVE_BUNNY_UP_LEVEL2                     0x08007273   Thumb Code   190  pacmanintegration.o(MYCODE)
+    MOVE_BUNNY_LEFT                          0x08007331   Thumb Code   144  pacmanintegration.o(MYCODE)
+    MOVE_BUNNY_LEFT_LEVEL2                   0x080073d1   Thumb Code   180  pacmanintegration.o(MYCODE)
+    MOVE_BUNNY_RIGHT                         0x08007485   Thumb Code   166  pacmanintegration.o(MYCODE)
+    MOVE_BUNNY_RIGHT_LEVEL2                  0x0800752b   Thumb Code   182  pacmanintegration.o(MYCODE)
+    DRAW_LANE1_MOVING                        0x080075e1   Thumb Code   344  pacmanintegration.o(MYCODE)
+    DRAW_LANE2_MOVING                        0x08007739   Thumb Code   364  pacmanintegration.o(MYCODE)
+    DRAW_LANE3_MOVING                        0x080078bd   Thumb Code   310  pacmanintegration.o(MYCODE)
+    DRAW_LANE4_MOVING                        0x08007a09   Thumb Code   160  pacmanintegration.o(MYCODE)
+    DRAW_LANE5_MOVING                        0x08007aa9   Thumb Code   160  pacmanintegration.o(MYCODE)
+    INITIALIZE_VARIABLES2                    0x08007b75   Thumb Code   236  pacmanintegration.o(MYCODE)
+    DRAW_TRIANGLE_FILLED                     0x08007c61   Thumb Code    46  pacmanintegration.o(MYCODE)
+    DRAW_RIVER                               0x08007c8f   Thumb Code    32  pacmanintegration.o(MYCODE)
+    TIMER                                    0x20000000   Data           2  pacmanintegration.o(MYDATA)
+    MYDATA                                   0x20000000   Section       84  pacmanintegration.o(MYDATA)
+    DIRECTION1                               0x20000002   Data           2  pacmanintegration.o(MYDATA)
+    DIRECTION2                               0x20000004   Data           2  pacmanintegration.o(MYDATA)
+    DIRECTION3                               0x20000006   Data           2  pacmanintegration.o(MYDATA)
+    COUNTER                                  0x20000008   Data           2  pacmanintegration.o(MYDATA)
+    PRISONERX                                0x2000000a   Data           2  pacmanintegration.o(MYDATA)
+    PRISONERY                                0x2000000c   Data           2  pacmanintegration.o(MYDATA)
+    GHOST1X                                  0x2000000e   Data           2  pacmanintegration.o(MYDATA)
+    GHOST1Y                                  0x20000010   Data           2  pacmanintegration.o(MYDATA)
+    GHOST2X                                  0x20000012   Data           2  pacmanintegration.o(MYDATA)
+    GHOST2Y                                  0x20000014   Data           2  pacmanintegration.o(MYDATA)
+    GHOST3X                                  0x20000016   Data           2  pacmanintegration.o(MYDATA)
+    GHOST3Y                                  0x20000018   Data           2  pacmanintegration.o(MYDATA)
+    BUNNY_X                                  0x2000001a   Data           2  pacmanintegration.o(MYDATA)
+    BUNNY_Y                                  0x2000001c   Data           2  pacmanintegration.o(MYDATA)
+    JUMPFRD                                  0x2000001e   Data           2  pacmanintegration.o(MYDATA)
+    LEVEL                                    0x20000020   Data           2  pacmanintegration.o(MYDATA)
+    STARTING_X_LOG1_L1                       0x20000022   Data           2  pacmanintegration.o(MYDATA)
+    STARTING_X_LOG2_L1                       0x20000024   Data           2  pacmanintegration.o(MYDATA)
+    SPEED_L1                                 0x20000026   Data           2  pacmanintegration.o(MYDATA)
+    LOG1_LENGTH_L1                           0x20000028   Data           2  pacmanintegration.o(MYDATA)
+    LOG2_LENGTH_L1                           0x2000002a   Data           2  pacmanintegration.o(MYDATA)
+    STARTING_X_LOG1_L2                       0x2000002c   Data           2  pacmanintegration.o(MYDATA)
+    STARTING_X_LOG2_L2                       0x2000002e   Data           2  pacmanintegration.o(MYDATA)
+    SPEED_L2                                 0x20000030   Data           2  pacmanintegration.o(MYDATA)
+    LOG1_LENGTH_L2                           0x20000032   Data           2  pacmanintegration.o(MYDATA)
+    LOG2_LENGTH_L2                           0x20000034   Data           2  pacmanintegration.o(MYDATA)
+    STARTING_X_LOG1_L3                       0x20000036   Data           2  pacmanintegration.o(MYDATA)
+    STARTING_X_LOG2_L3                       0x20000038   Data           2  pacmanintegration.o(MYDATA)
+    SPEED_L3                                 0x2000003a   Data           2  pacmanintegration.o(MYDATA)
+    LOG1_LENGTH_L3                           0x2000003c   Data           2  pacmanintegration.o(MYDATA)
+    LOG2_LENGTH_L3                           0x2000003e   Data           2  pacmanintegration.o(MYDATA)
+    STARTING_X_LOG1_L4                       0x20000040   Data           2  pacmanintegration.o(MYDATA)
+    STARTING_X_LOG2_L4                       0x20000042   Data           2  pacmanintegration.o(MYDATA)
+    SPEED_L4                                 0x20000044   Data           2  pacmanintegration.o(MYDATA)
+    LOG1_LENGTH_L4                           0x20000046   Data           2  pacmanintegration.o(MYDATA)
+    LOG2_LENGTH_L4                           0x20000048   Data           2  pacmanintegration.o(MYDATA)
+    STARTING_X_LOG1_L5                       0x2000004a   Data           2  pacmanintegration.o(MYDATA)
+    STARTING_X_LOG2_L5                       0x2000004c   Data           2  pacmanintegration.o(MYDATA)
+    SPEED_L5                                 0x2000004e   Data           2  pacmanintegration.o(MYDATA)
+    LOG1_LENGTH_L5                           0x20000050   Data           2  pacmanintegration.o(MYDATA)
+    LOG2_LENGTH_L5                           0x20000052   Data           2  pacmanintegration.o(MYDATA)
+    Heap_Mem                                 0x20000058   Data         512  startup_stm32f10x_md.o(HEAP)
+    HEAP                                     0x20000058   Section      512  startup_stm32f10x_md.o(HEAP)
+    Stack_Mem                                0x20000258   Data        1024  startup_stm32f10x_md.o(STACK)
+    STACK                                    0x20000258   Section     1024  startup_stm32f10x_md.o(STACK)
+    __initial_sp                             0x20000658   Data           0  startup_stm32f10x_md.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$P$D$K$B$S$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$~IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$ROPI$EBA8$STANDARDLIB$REQ8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __Vectors_Size                           0x000000ec   Number         0  startup_stm32f10x_md.o ABSOLUTE
+    __Vectors                                0x08000000   Data           4  startup_stm32f10x_md.o(RESET)
+    Reset_Handler                            0x080000ed   Thumb Code     8  startup_stm32f10x_md.o(.text)
+    __Vectors_End                            0x080000ec   Data           0  startup_stm32f10x_md.o(RESET)
+    NMI_Handler                              0x080000f5   Thumb Code     2  startup_stm32f10x_md.o(.text)
+    HardFault_Handler                        0x080000f7   Thumb Code     2  startup_stm32f10x_md.o(.text)
+    MemManage_Handler                        0x080000f9   Thumb Code     2  startup_stm32f10x_md.o(.text)
+    BusFault_Handler                         0x080000fb   Thumb Code     2  startup_stm32f10x_md.o(.text)
+    UsageFault_Handler                       0x080000fd   Thumb Code     2  startup_stm32f10x_md.o(.text)
+    SVC_Handler                              0x080000ff   Thumb Code     2  startup_stm32f10x_md.o(.text)
+    DebugMon_Handler                         0x08000101   Thumb Code     2  startup_stm32f10x_md.o(.text)
+    PendSV_Handler                           0x08000103   Thumb Code     2  startup_stm32f10x_md.o(.text)
+    SysTick_Handler                          0x08000105   Thumb Code     2  startup_stm32f10x_md.o(.text)
+    ADC1_2_IRQHandler                        0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    CAN1_RX1_IRQHandler                      0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    CAN1_SCE_IRQHandler                      0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    DMA1_Channel1_IRQHandler                 0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    DMA1_Channel2_IRQHandler                 0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    DMA1_Channel3_IRQHandler                 0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    DMA1_Channel4_IRQHandler                 0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    DMA1_Channel5_IRQHandler                 0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    DMA1_Channel6_IRQHandler                 0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    DMA1_Channel7_IRQHandler                 0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    EXTI0_IRQHandler                         0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    EXTI15_10_IRQHandler                     0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    EXTI1_IRQHandler                         0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    EXTI2_IRQHandler                         0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    EXTI3_IRQHandler                         0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    EXTI4_IRQHandler                         0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    EXTI9_5_IRQHandler                       0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    FLASH_IRQHandler                         0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    I2C1_ER_IRQHandler                       0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    I2C1_EV_IRQHandler                       0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    I2C2_ER_IRQHandler                       0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    I2C2_EV_IRQHandler                       0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    PVD_IRQHandler                           0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    RCC_IRQHandler                           0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    RTCAlarm_IRQHandler                      0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    RTC_IRQHandler                           0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    SPI1_IRQHandler                          0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    SPI2_IRQHandler                          0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    TAMPER_IRQHandler                        0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    TIM1_BRK_IRQHandler                      0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    TIM1_CC_IRQHandler                       0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    TIM1_TRG_COM_IRQHandler                  0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    TIM1_UP_IRQHandler                       0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    TIM2_IRQHandler                          0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    TIM3_IRQHandler                          0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    TIM4_IRQHandler                          0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    USART1_IRQHandler                        0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    USART2_IRQHandler                        0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    USART3_IRQHandler                        0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    USBWakeUp_IRQHandler                     0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    USB_HP_CAN1_TX_IRQHandler                0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    USB_LP_CAN1_RX0_IRQHandler               0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    WWDG_IRQHandler                          0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    __user_initial_stackheap                 0x08000109   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    __use_two_region_memory                  0x0800012d   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_escrow$2region                 0x0800012f   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_expand$2region                 0x08000131   Thumb Code     2  heapauxi.o(.text)
+    SystemInit                               0x08000261   Thumb Code   102  system_stm32f10x.o(.text.SystemInit)
+    __main                                   0x080002c9   Thumb Code    36  pacmanintegration.o(MYCODE)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x080000ed
+
+  Load Region LR_1 (Base: 0x08000000, Size: 0x00007d8c, Max: 0xffffffff, ABSOLUTE)
+
+    Execution Region ER_RO (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00007d38, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x08000000   0x08000000   0x000000ec   Data   RO           10    RESET               startup_stm32f10x_md.o
+    0x080000ec   0x080000ec   0x00000040   Code   RO           11  * .text               startup_stm32f10x_md.o
+    0x0800012c   0x0800012c   0x00000006   Code   RO           34    .text               c_w.l(heapauxi.o)
+    0x08000132   0x08000132   0x00000002   PAD
+    0x08000134   0x08000134   0x00000008   Code   RO           18    .text.SetSysClock   system_stm32f10x.o
+    0x0800013c   0x0800013c   0x00000122   Code   RO           22    .text.SetSysClockTo72  system_stm32f10x.o
+    0x0800025e   0x0800025e   0x00000002   PAD
+    0x08000260   0x08000260   0x00000066   Code   RO           16    .text.SystemInit    system_stm32f10x.o
+    0x080002c6   0x080002c6   0x00000002   PAD
+    0x080002c8   0x080002c8   0x00007a70   Code   RO            2  * MYCODE              pacmanintegration.o
+
+
+    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x08007d38, Size: 0x00000054, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x08007d38   0x00000054   Data   RW            1    MYDATA              pacmanintegration.o
+
+
+    Execution Region ER_ZI (Exec base: 0x20000058, Load base: 0x08007d8c, Size: 0x00000600, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000058        -       0x00000200   Zero   RW            9    HEAP                startup_stm32f10x_md.o
+    0x20000258        -       0x00000400   Zero   RW            8    STACK               startup_stm32f10x_md.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+     31344        924          0         84          0      15372   pacmanintegration.o
+        64         26        236          0       1536        804   startup_stm32f10x_md.o
+       400          0          0          0          0       2871   system_stm32f10x.o
+
+    ----------------------------------------------------------------------
+     31812        950        236         84       1536      19047   Object Totals
+         0          0          0          0          0          0   (incl. Generated)
+         4          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         6          0          0          0          0        152   heapauxi.o
+
+    ----------------------------------------------------------------------
+         8          0          0          0          0        152   Library Totals
+         2          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+         6          0          0          0          0        152   c_w.l
+
+    ----------------------------------------------------------------------
+         8          0          0          0          0        152   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+     31820        950        236         84       1536      19147   Grand Totals
+     31820        950        236         84       1536      19147   ELF Image Totals
+     31820        950        236         84          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                32056 (  31.30kB)
+    Total RW  Size (RW Data + ZI Data)              1620 (   1.58kB)
+    Total ROM Size (Code + RO Data + RW Data)      32140 (  31.39kB)
+
+==============================================================================
+
